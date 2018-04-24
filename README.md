@@ -1,6 +1,14 @@
 # Meetup 24 avril 2018 - SpringBoot Angular 5
 
+
+
 # back
+
+## build & run
+
+mvn spring-boot:run
+
+## doc
 
 https://start.spring.io/
 
@@ -19,6 +27,16 @@ mvn spring-boot:run
 curl -i -X POST -H "Content-Type:application/json" -d '{ "prenom" : "Serge", "nom" : "Val" }' http://localhost:8080/personnes
 
 # front
+
+## test
+
+ng test
+
+## run (dev)
+
+ng serve --open
+
+## doc
 
 https://blog.carbonfive.com/2013/10/27/the-javascript-event-loop-explained/
 
