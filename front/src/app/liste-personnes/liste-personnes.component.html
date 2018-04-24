@@ -1,0 +1,35 @@
+<div class="container">
+  <h2>
+    Nouvelle personne
+  </h2>
+  <form #formulaire="ngForm">
+    <div class="form-group">
+      <label for="inputNom">Nom</label>
+      <input type="text" class="form-control" id="inputNom" name="inputNom" placeholder="Saisissez votre nom" [(ngModel)]="nouvellePersonne.nom">
+    </div>
+    <div class="form-group">
+      <label for="inputEmail">EMail</label>
+      <input type="email" class="form-control" id="inputEmail" name="inputEmail" placeholder="EMail" [(ngModel)]="nouvellePersonne.eMail">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="addPersonne(formulaire)">Ajouter</button>
+  </form>
+
+  <h2 class="plus40">
+    Liste des personnes saisies
+  </h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Nom</th>
+        <th scope="col">eMail</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let personne of personnesExistantes">
+        <td>{{ personne.nom }}</td>
+        <td>{{ personne.eMail }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
