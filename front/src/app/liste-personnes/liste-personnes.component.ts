@@ -1,4 +1,4 @@
-import { NgForm } from "@angular/forms";
+import { NgForm, FormsModule } from "@angular/forms";
 import { Component, OnInit } from "@angular/core";
 import { HttpPersonneService } from "../services/http-personne.service";
 import { Personne } from "../modele/Personne";

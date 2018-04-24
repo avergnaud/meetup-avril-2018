@@ -1,5 +1,6 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
+import { FormsModule } from '@angular/forms';
 import { ListePersonnesComponent } from "./liste-personnes.component";
 import { HttpPersonneService } from "../services/http-personne.service";
 import { HttpClient, HttpClientModule } from "@angular/common/http";
@@ -10,7 +11,7 @@ describe("ListePersonnesComponent", () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientModule],
+      imports: [FormsModule, HttpClientModule],
       providers: [HttpClient, HttpPersonneService],
       declarations: [ListePersonnesComponent]
     }).compileComponents();
